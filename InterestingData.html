@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Alzheimer's Research Project</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+
+		<nav>
+			<div class="logo">CELL RESEARCH</div>
+			<div class="nav-items">
+				<a href="index.html">Home</a>
+				<a href="WhatIsIt.html">What Is It</a>
+				<a href="OurSolution.html">Our Solution</a>
+				<a href="InterestingData.html">Interesting Data</a>
+				<a href="Patients.html">Meet a Patient</a>
+				<a href="Glossary.html">Glossary</a>
+			</div>
+		</nav>
+
+		<section class="hero">
+		<!-- Slideshow container -->
+			<br>
+			<div class="slideshow-container">
+
+			  <!-- Full-width images with number and caption text -->
+			  <div class="mySlides fade">
+			    <div class="numbertext">1 / 6</div>
+			    <img src="data/peoplewithalzheimers.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">2 / 6</div>
+			    <img src="data/dementiaworldwide.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">3 / 6</div>
+			    <img src="data/peoplewithdementia.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">4 / 6</div>
+			    <img src="data/funding.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">5 / 6</div>
+			    <img src="data/diagnosis.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">6 / 6</div>
+			    <img src="data/womenwithalzheimers.png" style="width:100%" class="slideshowimage">
+			  </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+
+			<div class="hero-container" style="height: 60vh;">
+				<div class="column-left-text">
+					<h1>Alzheimer's is...</h1>
+					<p>
+						- The most common cause of dementia. <br>
+						- The sixth leading cause of death in America. <br>
+						- The fourth most common brain disease. <br>
+						- Much more prominent in women. <br>
+						- Not a natural part of aging.<br>
+						- Diagnosable with peanut butter.<br>
+						- Caused by your genetics, environment, and lifestyle.<br>
+						- Only possible with both plaques and tangles.
+					</p>
+				</div>
+				<div class="column-left-text">
+					<h1>Alzheimer's has...</h1>
+					<p>
+						- 747,000 Canadian patients. <br>
+						- 50 million patients worldwide. <br>
+						- Many unpaid caregivers. <br>
+						- Three stages of development. <br>
+						- A diagnosis every four seconds.
+					</p>
+				</div>
+			</div>
+
+		</section>
+
+			<footer>
+				<div class="logo">CELL RESEARCH PROJECT</div>
+				<div class="nav-items">
+					<p>Designed by Luka & David</p>
+				</div>
+			</footer>	
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			// Thumbnail image controls
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+
+		</script>
+
+	</body>
+</html>
